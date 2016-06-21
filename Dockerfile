@@ -1,7 +1,8 @@
-FROM phusion
+FROM phusion/baseimage
 
 ## supervisord
-RUN apt-get install -y python-meld3 supervisor && \
+RUN apt-get update && \
+    apt-get install -y python-meld3 supervisor && \
     pip install supervisor-logging && \
     mkdir -p /var/log/supervisor
     
