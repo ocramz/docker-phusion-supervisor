@@ -4,7 +4,8 @@ MAINTAINER Marco Zocca, zocca marco gmail
 
 ## supervisord
 RUN apt-get update && \
-    apt-get install -y python-meld3 supervisor && \
+    apt-get install -y python-meld3 python-setuptools supervisor && \
+    easy_install pip && \
     pip install supervisor-logging && \
     mkdir -p /var/log/supervisor
     
