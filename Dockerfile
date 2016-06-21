@@ -8,3 +8,9 @@ RUN apt-get update && \
     
 ADD etc/supervisord.conf /etc/supervisord.conf
 ADD opt/supervisord/bin/start.sh /opt/supervisor/bin/
+
+RUN echo "/opt/qnib/supervisor/bin/start.sh" >> /root/.bash_history && \
+    echo "tail -f /var/log/supervisor/" >> /root/.bash_history && \
+    echo "supervisorctl status" >> /root/.bash_history
+    
+CMD ["/opt/supervisord/bin/start.sh", "-n"]
