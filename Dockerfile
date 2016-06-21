@@ -6,4 +6,4 @@ RUN apt-get install -y python-meld3 supervisor && \
     mkdir -p /var/log/supervisor
     
 ADD etc/supervisord.conf /etc/supervisord.conf
-ADD opt/qnib/supervisor/bin/start.sh /opt/qnib/supervisor/bin/
+ADD opt/supervisor/bin/start.sh /opt/supervisor/bin/
