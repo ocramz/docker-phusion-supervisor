@@ -1,5 +1,7 @@
 FROM phusion/baseimage
 
+MAINTAINER Marco Zocca, zocca marco gmail
+
 ## supervisord
 RUN apt-get update && \
     apt-get install -y python-meld3 supervisor && \
