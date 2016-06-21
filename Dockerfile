@@ -17,3 +17,9 @@ RUN echo "/opt/qnib/supervisor/bin/start.sh" >> /root/.bash_history && \
     echo "supervisorctl status" >> /root/.bash_history
     
 CMD ["/opt/supervisord/bin/start.sh", "-n"]
+
+
+# # # clean temp data
+RUN sudo apt-get clean && \
+    apt-get purge && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
