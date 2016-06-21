@@ -2,8 +2,8 @@ FROM phusion/baseimage
 
 MAINTAINER Marco Zocca, zocca marco gmail
 
-
-ENV CT_VER=0.14.0 # consul-template
+# consul-template version
+ENV CT_VER 0.14.0 
 
 ## supervisord
 RUN apt-get update && \
