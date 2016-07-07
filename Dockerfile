@@ -5,9 +5,14 @@ MAINTAINER Marco Zocca, zocca marco gmail
 # consul-template version
 ENV CT_VER 0.14.0 
 
+# TLS keypair directory
+ENV TLS_KP_DIR ${HOME}/.certs
+RUN mkdir -p TLS_KP_DIR
+
+
 ## supervisord
 RUN apt-get update && \
-    apt-get install -y bsdtar curl python-meld3 python-setuptools supervisor && \
+    apt-get install -y --no-install-recommends bsdtar curl python-meld3 python-setuptools supervisor && \
     easy_install pip && \
     pip install supervisor-logging && \
     mkdir -p /var/log/supervisor
