@@ -6,8 +6,8 @@ MAINTAINER Marco Zocca, zocca marco gmail
 ENV CT_VER 0.14.0 
 
 # TLS keypair directory
-ENV TLS_KP_DIR ${HOME}/.certs
-RUN mkdir -p TLS_KP_DIR
+ENV TLS_KP_DIR ${HOME}/.tls_certs
+RUN mkdir -p ${TLS_KP_DIR}
 
 
 ## supervisord
