@@ -31,7 +31,7 @@ RUN curl -Lsf https://releases.hashicorp.com/consul-template/${CT_VER}/consul-te
     chmod +x /usr/local/bin/consul-template
     
 
-CMD ["/opt/supervisord/bin/start.sh", "-n"]
+CMD ["/opt/supervisor/bin/start.sh", "-n"]
 
 
 # # # clean temp data
