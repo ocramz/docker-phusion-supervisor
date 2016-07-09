@@ -35,6 +35,6 @@ CMD ["/opt/supervisor/bin/start.sh", "-n"]
 
 
 # # # clean temp data
-RUN sudo apt-get clean && \
+RUN apt-get clean && \
     apt-get purge && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
